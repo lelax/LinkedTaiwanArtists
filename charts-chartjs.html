@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>TaiWhy-art</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Flattern
+  * Template URL: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+
+
+  <body class="pricing-page"> 
+        
+    <header id="header" class="header sticky-top">
+
+
+      <div class="topbar d-flex align-items-center light-background">
+        <div class="container d-flex justify-content-center justify-content-md-between">
+          <div class="contact-info d-flex align-items-center">
+            <div class="container service-details align-items-center light-background">
+              <h4>An Information Visualization project</h4>
+              </div>
+            </div>
+        </div>
+      </div><!-- End Top Bar -->
+        
+            <div class="branding d-flex align-items-cente">
+        
+              <div class="container position-relative d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo d-flex align-items-center">
+                  <!-- Uncomment the line below if you also wish to use an image logo -->
+                  <!-- <img src="assets/img/logo.png" alt=""> -->
+                  <h1 class="sitename">TaiWhy-art</h1>
+                </a>
+        
+                <nav id="navmenu" class="navmenu">
+                  <ul>
+                    <li><a href="index.html">Home<br></a></li>
+                    <li><a href="about.html">The Context</a></li>
+                    <li><a href="services.html">The Questions</a></li>
+                    <li><a href="charts-chartjs.html" class="active">The Data</a></li>
+                    <li><a href="map.html">The Story</a></li>
+                    
+                    
+                    <li><a href="contact.html">Credits</a></li>
+                  </ul>
+                  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav>
+        
+              </div>
+        
+            </div>
+        
+          </header>
+
+
+
+  <main id="main" class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background">
+          <div class="container d-lg-flex justify-content-between align-items-center">
+            <h1 class="mb-2 mb-lg-0">The Data</h1>
+            <nav class="breadcrumbs">
+              <ol>
+                <li><a href="index.html">Home</a></li>
+                <li class="current">The Data</li>
+              </ol>
+            </nav>
+          </div>
+        </div><!-- End Page Title -->
+
+    <div class="container">
+      <h4></h4>
+      <h3>Exploratory Analysis</h3>
+      
+    </div><!-- End Page Title -->
+
+    <div class="container">
+
+    <p>For this project, we have been exploring the Linked Open Data set:<a href="https://linkedart.ascdc.tw/index.php?lang=en_US.utf8" target="_blank"> Linked Taiwan Artist</a> and the Wikidata knowledge base.</p>
+
+    <section class="section call-to-action section">
+      <div class="row">
+
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+               <!-- Bar Chart -->
+               <canvas id="barChart" style="max-height: 400px;"></canvas>
+               <script>
+                 document.addEventListener("DOMContentLoaded", () => {
+                   new Chart(document.querySelector('#barChart'), {
+                     type: 'bar',
+                     data: {
+                       labels: ['Chen Cheng-po', 'Yang San-lang', 'Liao Chi-chun', 'Li Shih-chiao', 'Chen Jin', 'Lin Yu-shan', 'Li Mei-shu', 'Chen Zhi-qi', 'Kinichiro Ishikawa', 'Yan Shui-long', 'Keigetsu Matsubayashi', 'Pan Yu-liang', 'Itaru Tanabe', 'Pu Tian-sheng'],
+                       datasets: [{
+                         label: 'Number of artworks',
+                         data: [174, 35, 30, 25, 24, 22, 21, 13, 13, 13, 11, 6, 5, 3],
+                         backgroundColor: [
+                           'rgba(240, 60, 2, 0.9)',
+                           'rgba(240, 60, 2, 0.8)',
+                           'rgba(240, 60, 2, 0.7)',
+                           'rgba(240, 60, 2, 0.6)',
+                           'rgba(240, 60, 2, 0.5)',
+                           'rgba(240, 60, 2, 0.4)',
+                           'rgba(240, 60, 2, 0.3)',
+                           'rgba(240, 60, 2, 0.3)',
+                           'rgba(240, 60, 2, 0.2)',
+                           'rgba(240, 60, 2, 0.2)',
+                           'rgba(240, 60, 2, 0.2)',
+                           'rgba(240, 60, 2, 0.2)',
+                           'rgba(240, 60, 2, 0.2)',
+                           'rgba(240, 60, 2, 0.1)'
+                         ],
+                         borderWidth: 1
+                       }]
+                     },
+                     options: {
+                       scales: {
+                         y: {
+                           beginAtZero: true
+                         }
+                       }
+                     }
+                   });
+                 });
+               </script>
+                <h6 class="card-footer">Artistic production in Taiwan (1895-1945)</h6>
+               <!-- End Bar CHart -->
+              
+              <!-- Description Bar CHart -->
+             </div>
+           </div>
+         </div>
+ 
+         <div class="col-lg-6">
+           <div class="section-chart">
+             <div class="card-body">
+               <h4 class="card-title">The most influential Taiwanese artists</h4>
+               
+               <div>
+               <p>Our data exploration starts with an overview of the artistic objects in the Japanese colonial period (1895-1945).</p>
+               <p>In this case, in our ontology, we are looking for all kinds artistic objects:</p>
+               <ul>
+                <li>Paintings</li>
+                <li>Photographs</li>
+                <li>Postcards</li>
+               </ul>
+              </div>
+              <!-- End Description Bar CHart -->
+
+              
+              <!-- Description Pie CHart -->
+             </div>
+            </div>
+          </div>
+          <div class="row">
+          <div class="col-lg-6">
+            <div>
+             <div class="card-body">
+                <h4 class="card-title">Top 3</h4>
+                
+                <div>
+                <p>Chen Cheng-Po has been the artists that produced the most in the period of reference:
+                 Japanese colonial period (1895-1945).</p>
+                <ol>
+                 <li>Chen Cheng-Po: 157 paintings</li>
+                 <li>Yang San-lang: 35 paintings</li>
+                 <li>Liao Chi-chun: 27 paintings</li>
+                 <li>Li Shih-chiao: 25 paintings</li>
+                 <li>Chen Jin: 23 paintings</li>
+                </ol>
+                <p>Almost 59% of the painting's production in the period of reference in Taiwan has been done by Chen Cheng-Po</p>
+               </div>
+               <!-- End Description Pie CHart -->
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+                          
+
+              <!-- Pie Chart -->
+              <canvas id="pieChart" style="max-height: 400px;"></canvas>
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new Chart(document.querySelector('#pieChart'), {
+                    type: 'pie',
+                    data: {
+                      labels: [
+                        'Chen Cheng-Po',
+                        'Yang San-lang',
+                        'Liao Chi-chun',
+                        'Li Shih-chiao',
+                        'Chen Jin'
+                      ],
+                      datasets: [{
+                        label: 'Artistic Production (%)',
+                        data: [58.8, 13.1, 10.1, 9.36, 8.6],
+                        backgroundColor: [
+                          'rgb(240, 60, 2)',
+                          'rgb(54, 48, 47)',
+                          'rgb(214, 88, 62)',
+                          'rgb(110, 71, 63)',
+                          'rgb(171, 158, 155)'
+
+                        ],
+                        hoverOffset: 4
+                      }]
+                    }
+                  });
+                });
+              </script>
+              <h6 class="card-footer">The predominance of Chen Cheng-Po</h6>
+              <!-- End Pie CHart -->
+               <!-- Rawgraph -->
+                
+            </div>
+          </div>
+        </div>
+
+  
+
+               <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Exhibitions per year</h5>
+                    
+                                
+
+              <div class="position-relative mt-4 rounded-4">
+                <img src="assets/img/viz_exhibitionXyears.png" class="img-fluid rounded-4 mb-4" alt="Bar chart">
+            </div>
+ <!-- End First Rawgraph -->
+
+                <!-- Rawgraph -->
+                
+              </div>
+            </div>
+          </div>
+  
+                 <div class="col-lg-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">1926???</h5>
+                                  
+  
+                <div class="position-relative mt-4 rounded-4">
+                  <img src="assets/img/viz_bubble_1926.png" class="img-fluid rounded-4 mb-4" alt="Bubble chart">
+              </div>
+            </div>
+   <!-- End Second Rawgraph -->
+            </div>
+          </div>
+        </div>
+
+       
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">TaiWhy-art</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>Digital Humanities & Digital Knowledge</p>
+              <p>University of Bologna</p>
+              <p class="mt-3"><strong>Project Work:</strong> <span>Information Visualization</span></p>
+              <p><strong>Team Members</strong> <span>Carmen, Van & Marida</span></p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">The Context</a></li>
+              <li><a href="services.html">The Questions</a></li>
+              <li><a href="charts-chartjs.html">The Data</a></li>
+              <li><a href="map.html">The Story</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Main Sources</h4>
+            <ul>
+              <li><a href="#">LOD ontology</a></li>
+              <li><a href="#">Wkidata</a></li>
+              <li><a href="#">Wikimedia</a></li>
+              
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 footer-links">
+            <img src="assets/img/favicon.png" class="img-fluid" alt="logo TaiWhy-art">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div>
+            © Copyright <strong><span>TaiWhy-art</span></strong>. All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Footer -->
+  
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
