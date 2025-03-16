@@ -179,236 +179,58 @@
     
 
     </section><!-- /Skills Section -->
-
-    <section class="section call-to-action section">
-      <div class="container">
-      <div class="row">
-
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-               <!-- Bar Chart -->
-               <canvas id="barChart" style="max-height: 400px;"></canvas>
-               <script>
-                 document.addEventListener("DOMContentLoaded", () => {
-                   new Chart(document.querySelector('#barChart'), {
-                     type: 'bar',
-                     data: {
-                       labels: ['Chen Cheng-po', 'Yang San-lang', 'Liao Chi-chun', 'Li Shih-chiao', 'Chen Jin', 'Lin Yu-shan', 'Li Mei-shu', 'Chen Zhi-qi', 'Kinichiro Ishikawa', 'Yan Shui-long', 'Keigetsu Matsubayashi', 'Pan Yu-liang', 'Itaru Tanabe', 'Pu Tian-sheng'],
-                       datasets: [{
-                         label: 'Number of artworks',
-                         data: [174, 35, 30, 25, 24, 22, 21, 13, 13, 13, 11, 6, 5, 3],
-                         backgroundColor: [
-                           'rgba(240, 60, 2, 0.9)',
-                           'rgba(240, 60, 2, 0.8)',
-                           'rgba(240, 60, 2, 0.7)',
-                           'rgba(240, 60, 2, 0.6)',
-                           'rgba(240, 60, 2, 0.5)',
-                           'rgba(240, 60, 2, 0.4)',
-                           'rgba(240, 60, 2, 0.3)',
-                           'rgba(240, 60, 2, 0.3)',
-                           'rgba(240, 60, 2, 0.2)',
-                           'rgba(240, 60, 2, 0.2)',
-                           'rgba(240, 60, 2, 0.2)',
-                           'rgba(240, 60, 2, 0.2)',
-                           'rgba(240, 60, 2, 0.2)',
-                           'rgba(240, 60, 2, 0.1)'
-                         ],
-                         borderWidth: 1
-                       }]
-                     },
-                     options: {
-                       scales: {
-                         y: {
-                           beginAtZero: true
-                         }
-                       }
-                     }
-                   });
-                 });
-               </script>
-                <h6 class="card-footer">Artistic production in Taiwan (1895-1945)</h6>
-               <!-- End Bar CHart -->
-              
-              <!-- Description Bar CHart -->
-             </div>
-           </div>
-         </div>
- 
-         <div class="col-lg-6">
-           <div class="section-chart">
-             <div class="card-body">
-               <h4 class="card-title">The most influential Taiwanese artists</h4>
-               
-               <div>
-               <p>Our data exploration starts with an overview of the artistic objects in the Japanese colonial period (1895-1945).</p>
-               <p>In this case, in our ontology, we are looking for all kinds artistic objects:</p>
-               <ul>
-                <li>Paintings</li>
-                <li>Photographs</li>
-                <li>Postcards</li>
-               </ul>
-              </div>
-              <!-- End Description Bar CHart -->
-
-              
-              <!-- Description Pie CHart -->
-             </div>
-            </div>
-          </div>
-          <div class="row">
-          <div class="col-lg-6">
-            <div>
-             <div class="card-body">
-                <h4 class="card-title">Top 3</h4>
-                
-                <div>
-                <p>Chen Cheng-Po has been the artists that produced the most in the period of reference:
-                 Japanese colonial period (1895-1945).</p>
-                <ol>
-                 <li>Chen Cheng-Po: 157 paintings</li>
-                 <li>Yang San-lang: 35 paintings</li>
-                 <li>Liao Chi-chun: 27 paintings</li>
-                 <li>Li Shih-chiao: 25 paintings</li>
-                 <li>Chen Jin: 23 paintings</li>
-                </ol>
-                <p>Almost 59% of the painting's production in the period of reference in Taiwan has been done by Chen Cheng-Po</p>
-               </div>
-               <!-- End Description Pie CHart -->
-
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-                          
-
-              <!-- Pie Chart -->
-              <canvas id="pieChart" style="max-height: 400px;"></canvas>
-              <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  new Chart(document.querySelector('#pieChart'), {
-                    type: 'pie',
-                    data: {
-                      labels: [
-                        'Chen Cheng-Po',
-                        'Yang San-lang',
-                        'Liao Chi-chun',
-                        'Li Shih-chiao',
-                        'Chen Jin'
-                      ],
-                      datasets: [{
-                        label: 'Artistic Production (%)',
-                        data: [58.8, 13.1, 10.1, 9.36, 8.6],
-                        backgroundColor: [
-                          'rgb(240, 60, 2)',
-                          'rgb(54, 48, 47)',
-                          'rgb(214, 88, 62)',
-                          'rgb(110, 71, 63)',
-                          'rgb(171, 158, 155)'
-
-                        ],
-                        hoverOffset: 4
-                      }]
-                    }
-                  });
-                });
-              </script>
-              <h6 class="card-footer">The predominance of Chen Cheng-Po</h6>
-              <!-- End Pie CHart -->
-               <!-- Rawgraph -->
-                
-            </div>
-          </div>
-        </div>
-
-  
-
+         <!-- Linked Open Data -->
+           <section id="bip-connections">
+              <div class="container">
                <div class="col-lg-6">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title">Exhibitions per year</h5>
+                    <h5 class="card-title">Exhibitions and Authors</h5>
                     
                                 
 
               <div class="position-relative mt-4 rounded-4">
-                <img src="assets/img/viz_exhibitionXyears.png" class="img-fluid rounded-4 mb-4" alt="Bar chart">
-            </div>
- <!-- End First Rawgraph -->
-
-                <!-- Rawgraph -->
-                
-              </div>
+                <img src="assets/img/pyhtonCharts/bipartite graph.png" class="img-fluid rounded-4 mb-4" alt="Bar chart">
             </div>
           </div>
-  
-                 <div class="col-lg-6">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">1926???</h5>
-                                  
-  
-                <div class="position-relative mt-4 rounded-4">
-                  <img src="assets/img/viz_bubble_1926.png" class="img-fluid rounded-4 mb-4" alt="Bubble chart">
-              </div>
-            </div>
-   <!-- End Second Rawgraph -->
-            </div>
-          </div>
-        </div>
-     
+          </section>
+ <!-- End Linked Open Data-->
+ <!-- Clients Section -->
+ <section id="clients" class="clients section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Chart Journey</h2>
+    <p>From a chart to a story of exploration</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row g-0 clients-wrap">
+
+      <div class="col-xl-3 col-md-4 client-logo">
+        <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+      </div><!-- End Client Item -->
+
+      <div class="col-xl-3 col-md-4 client-logo">
+        <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+      </div><!-- End Client Item -->
+
+      <div class="col-xl-3 col-md-4 client-logo">
+        <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+      </div><!-- End Client Item -->
+
+      <div class="col-xl-3 col-md-4 client-logo">
+        <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+      </div><!-- End Client Item -->
 
 
-
-         <div class="col-lg-12">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Taiwanese-International Exhibitions comparison</h5>
-              
-                          
-
-        <div class="position-relative mt-4 rounded-4">
-          <img src="assets/img/portfolio/International Editions.png" class="img-fluid rounded-4 mb-4" alt="Bar chart">
-      </div>
-<!-- End third Rawgraph -->
-       
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Types of artworks in the dataset</h5>
-              
-                          
-
-        <div class="position-relative mt-4 rounded-4">
-          <img src="assets/img/viz_artwork_by_type.svg" class="img-fluid rounded-4 mb-4" alt="Bar chart">
-      </div>
-
-
-<!-- End fourth Rawgraph -->
-
-            </div>
-          </div>
-        </div>
-      <div class="col-lg-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Linear Dendograph</h5>
-            
-                        
-
-      <div class="position-relative mt-4 rounded-4">
-        <img src="assets/img/viz_female_nude.svg" class="img-fluid rounded-4 mb-4" alt="Bar chart">
     </div>
-      </div>
-    </section>
 
+  </div>
+
+</section><!-- /Clients Section -->
+               
   
   
   </main><!-- End #main -->
