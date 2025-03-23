@@ -163,62 +163,81 @@
                </script>
                 <h6 class="card-footer">Artistic production in Taiwan (1895-1945)</h6>
                <!-- End Bar CHart -->
-              
-              <!-- Description Bar CHart -->
-             </div>
-           </div>
-         </div>
- 
-         <div class="col-lg-6">
-           <div class="section-chart">
-             <div class="card-body">
-               <h4 class="card-title">The most influential Taiwanese artists</h4>
-               
-               <div>
-               <p>Chen Cheng-po was undoubtedly the most prolific artist of his time.</p> 
-               <p>In the chart on the side we can see the distribution of artwork for each artist. Our database in this case includes, in addition to paintings, also photos and postcards.</p>
-                <p>Let's refine our analysis and focus only on the production of paintings.</p>
-               </ul>
-              </div>
-             </div>
-             
-        </section>
+            </div>
+          </div>
+        </div>
+            <div class="col-lg-6">
+              <div class="section-chart">
+                <div class="card-body">
+                  <h4 class="card-title">The most influential Taiwanese artists</h4>
+                  
+                  <div>
+                  <p>Chen Cheng-po was undoubtedly the most prolific artist of his time.</p> 
+                  <p>In the chart on the side we can see the distribution of artwork for each artist. Our database in this case includes, in addition to paintings, also photos and postcards.</p>
+                   <p>Let's refine our analysis and focus only on the production of paintings.</p>
+                  </ul>
+                 </div>
+                </div>
+          </section>
+    <!-- Team Section -->
+    <section id="art-obj-types" class="call-to-action section light-background">
+      <div class="container">
+      <div class="row">
 
-              <!-- End Description Bar CHart -->
-              <section id="art-obj-types" class="section call-to-action section light-background">
-                <div class="container">
-                <div class="row">
-          
-                      <div class="col-lg-6">
-                        <div class="section-chart">
-                          <div class="card-body">
-                            <h4 class="card-title">Which kind of artistic objects?</h4>
-                            
-                            <div>
-                            <p>In the above chart we are showing the overall amount of artistic objects in the dataset.  </p>
-                            <p>It includes:</p>
-                            <ul>
-                              <li>Paintings</li>
-                              <li>Photographs</li>
-                              <li>Postcards</li>
-                            </ul>
-                            <p>We can see that the Paintings are the majority of artworks, so we will explore them, filtering our search by this type.</p>
-                           </div>
-                          </div>
-                        </div>
-                      </div>
-                        <div class="col-lg-6">
-                          <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title"></h5>
-      
-                              <div class="position-relative mt-4 rounded-4">
-                                <img src="assets/img/portfolio/viz_artwork_by_type.svg" class="img-fluid rounded-4 mb-4" alt="">
-                            </div>  
-                            </div>
-                          </div>
-                        </div>
-                      </section>
+            <div class="col-lg-6">
+              <div class="section-chart">
+                <div class="card-body">
+                  <h4 class="card-title">Which kind of artistic objects?</h4>
+                  
+                  <div>
+                  <p>In the above chart we are showing the overall amount of artistic objects in the dataset.  </p>
+                  <p>It includes:</p>
+                  <ul>
+                    <li>Paintings</li>
+                    <li>Photographs</li>
+                    <li>Postcards</li>
+                  </ul>
+                  <p>We can see that the Paintings are the majority of artworks, so we will explore them, filtering our search by this type.</p>
+                 </div>
+                </div>
+              </div>
+            </div>
+           
+                <div class="col-lg-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title"></h5>
+                      <!-- Doughnut Chart -->
+              <canvas id="doughnutChart" style="max-height: 400px;"></canvas>
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new Chart(document.querySelector('#doughnutChart'), {
+                    type: 'doughnut',
+                    data: {
+                      labels: [
+                        'Paintings',
+                        'Photographs',
+                        'Postcards'
+                      ],
+                      datasets: [{
+                        label: 'Type of Artwork',
+                        data: [366, 42, 33],
+                        backgroundColor: [
+                          'rgba(240, 60, 2, 0.9)',
+                          'rgba(50, 70, 2, 0.6)',
+                          'rgba(140, 80, 2, 0.3)'
+                        ],
+                        hoverOffset: 4
+                      }]
+                    }
+                  });
+                });
+              </script>
+              <h6 class="card-footer">Most of the artwors are Paintings</h6>
+              <!-- End Doughnut CHart -->
+            </div>
+                  </div>
+                </section>
                         <!-- Description Bar CHart -->
               <section class="section call-to-action section">
                 <div class="container">
@@ -457,8 +476,11 @@
              <p>
                We have been looking at the painting's topic of female nude and we found it in all the three most productive artists.
              </p>
-             <p>Chen Cheng-Po proportionally to the high number of artworks, produced 7 paintings with female nude subjects.</p>
-             <p>But the female nudes appeared also in 2 artworks by Yan Shui-long.</p>
+             <p>The female nudes appeared in artworks by Yan Shui-long and Liao Chi-chun.</p>
+             <p>Chen Cheng-Po proportionally to the high number of artworks, produced 7 paintings with female nude subjects accordingly to our dataset.</p>
+             <p>But we performed a query on the artworks labels, and we assume there could be more painting representing female nudes.</p>
+             <p>In the <a href="https://www.lianggallery.com/en/?portfolio=chen-cheng-po" target="_blank">Lian Gallery page dedicated to Chen Cheng-Po </a>we can see already more than 7 female nude paintings.</p>
+             
            </div>
              
           </section> 
@@ -498,6 +520,8 @@
                 <img src="assets/img/lianG/8.png" height="100" class="img-fluid" alt="female nude Cheng-Po">
               </div><!-- End Client Item -->
   
+              <p><a href="https://www.lianggallery.com/en/?portfolio=chen-cheng-po" target="_blank"><span style="font-size:smaller; text-align:center;">[Lian Gallery - Chen Cheng-Po] </span></a></p>
+       
           </div>
     <!-- Clients Section -->
     <section id="clients" class="clients section">
@@ -527,9 +551,7 @@
           <div class="col-xl-3 col-md-4 client-logo">
             <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
           </div><!-- End Client Item -->
-
-
-        </div>
+ </div>
 
       </div>
 
