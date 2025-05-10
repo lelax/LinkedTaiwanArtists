@@ -1,4 +1,4 @@
-Thanks for downloading this template!
+Credits:
 
 Template Name: Flattern
 Template URL: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/
